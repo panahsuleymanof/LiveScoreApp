@@ -15,6 +15,8 @@
 		C10D16102C099BCB004C76DA /* Base in Resources */ = {isa = PBXBuildFile; fileRef = C10D160F2C099BCB004C76DA /* Base */; };
 		C10D16192C099CA3004C76DA /* LoginController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C10D16182C099CA3004C76DA /* LoginController.swift */; };
 		C10D161B2C099CF2004C76DA /* RegisterController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C10D161A2C099CF2004C76DA /* RegisterController.swift */; };
+		C10D166A2C0B1201004C76DA /* FileManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C10D16692C0B1201004C76DA /* FileManager.swift */; };
+		C10D166F2C0B150E004C76DA /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = C10D166E2C0B150E004C76DA /* User.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +30,8 @@
 		C10D16112C099BCB004C76DA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C10D16182C099CA3004C76DA /* LoginController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginController.swift; sourceTree = "<group>"; };
 		C10D161A2C099CF2004C76DA /* RegisterController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterController.swift; sourceTree = "<group>"; };
+		C10D16692C0B1201004C76DA /* FileManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileManager.swift; sourceTree = "<group>"; };
+		C10D166E2C0B150E004C76DA /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +64,8 @@
 		C10D15FF2C099BCA004C76DA /* LiveScoreApp */ = {
 			isa = PBXGroup;
 			children = (
+				C10D166B2C0B14EE004C76DA /* Model */,
+				C10D16682C0B11E4004C76DA /* Manager */,
 				C10D16172C099C3E004C76DA /* Controller */,
 				C10D16002C099BCA004C76DA /* AppDelegate.swift */,
 				C10D16022C099BCA004C76DA /* SceneDelegate.swift */,
@@ -79,6 +85,22 @@
 				C10D161A2C099CF2004C76DA /* RegisterController.swift */,
 			);
 			path = Controller;
+			sourceTree = "<group>";
+		};
+		C10D16682C0B11E4004C76DA /* Manager */ = {
+			isa = PBXGroup;
+			children = (
+				C10D16692C0B1201004C76DA /* FileManager.swift */,
+			);
+			path = Manager;
+			sourceTree = "<group>";
+		};
+		C10D166B2C0B14EE004C76DA /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				C10D166E2C0B150E004C76DA /* User.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -155,8 +177,10 @@
 				C10D161B2C099CF2004C76DA /* RegisterController.swift in Sources */,
 				C10D16012C099BCA004C76DA /* AppDelegate.swift in Sources */,
 				C10D16192C099CA3004C76DA /* LoginController.swift in Sources */,
+				C10D166A2C0B1201004C76DA /* FileManager.swift in Sources */,
 				C10D160B2C099BCA004C76DA /* LiveScoreApp.xcdatamodeld in Sources */,
 				C10D16032C099BCA004C76DA /* SceneDelegate.swift in Sources */,
+				C10D166F2C0B150E004C76DA /* User.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

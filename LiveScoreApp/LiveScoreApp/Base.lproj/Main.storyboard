@@ -149,6 +149,9 @@
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="string" keyPath="cornerRadius" value="18"/>
                                         </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="signUpClicked:" destination="2LW-ZC-QEF" eventType="touchUpInside" id="6mJ-LZ-fxm"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <constraints>

@@ -21,7 +21,7 @@ class LoginController: UIViewController {
         pswdField.layer.cornerRadius = 18
         pswdField.layer.masksToBounds = true
         usernameField.attributedPlaceholder = NSAttributedString(
-            string: "Username",
+            string: "E-mail",
             attributes: [NSAttributedString.Key.foregroundColor: UIColor.lightGray])
         pswdField.attributedPlaceholder = NSAttributedString(
             string: "Password",

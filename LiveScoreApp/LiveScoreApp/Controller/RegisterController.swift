@@ -18,7 +18,9 @@ class RegisterController: UIViewController {
     var users = [User]()
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         title = "Registration"
+        
         nameField.layer.cornerRadius = 18
         nameField.layer.masksToBounds = true
         pswdField.layer.cornerRadius = 18
@@ -39,8 +41,8 @@ class RegisterController: UIViewController {
         confirmField.attributedPlaceholder = NSAttributedString(
             string: "Confirm password",
             attributes: [NSAttributedString.Key.foregroundColor: UIColor.lightGray])
-        manager.getUser { userItems in
-            self.users = userItems
+        manager.getUser { users in
+            self.users = users
         }
     }
     
@@ -51,10 +53,20 @@ class RegisterController: UIViewController {
         let confirmPswd = confirmField.text {
             if !name.isEmpty && !email.isEmpty && !pswd.isEmpty && !confirmPswd.isEmpty {
                 if pswd == confirmPswd {
-                    let user = User(fullname: name, email: email, password: pswd)
-                    users.append(user)
-                    manager.savaUser(data: users)
-                    navigationController?.popViewController(animated: true)
+                    if users.contains(where: { $0.email == email }) {
+                        let alertController = UIAlertController(title: "Error",
+                                                                message: "User already exists",
+                                                                preferredStyle: .alert)
+                        let ok = UIAlertAction(title: "OK", style: .default)
+                        alertController.addAction(ok)
+                        present(alertController, animated: true)
+                    } else {
+                        let user = User(fullname: name, email: email, password: pswd)
+                        users.append(user)
+                        manager.savaUser(data: users)
+                        navigationController?.popViewController(animated: true)
+                    }
+        
                 } else {
                     let alertController = UIAlertController(title: "Error",
                                                             message: "Passwords are not matched",
@@ -62,7 +74,6 @@ class RegisterController: UIViewController {
                     let ok = UIAlertAction(title: "OK", style: .default)
                     alertController.addAction(ok)
                     present(alertController, animated: true)
-
                 }
             } else {
                 let alertController = UIAlertController(title: "Warning",

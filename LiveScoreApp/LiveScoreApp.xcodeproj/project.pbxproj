@@ -17,6 +17,7 @@
 		C10D161B2C099CF2004C76DA /* RegisterController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C10D161A2C099CF2004C76DA /* RegisterController.swift */; };
 		C10D166A2C0B1201004C76DA /* FileManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C10D16692C0B1201004C76DA /* FileManager.swift */; };
 		C10D166F2C0B150E004C76DA /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = C10D166E2C0B150E004C76DA /* User.swift */; };
+		C10D16712C144388004C76DA /* HomeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C10D16702C144388004C76DA /* HomeController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +33,7 @@
 		C10D161A2C099CF2004C76DA /* RegisterController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterController.swift; sourceTree = "<group>"; };
 		C10D16692C0B1201004C76DA /* FileManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileManager.swift; sourceTree = "<group>"; };
 		C10D166E2C0B150E004C76DA /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		C10D16702C144388004C76DA /* HomeController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,6 +85,7 @@
 			children = (
 				C10D16182C099CA3004C76DA /* LoginController.swift */,
 				C10D161A2C099CF2004C76DA /* RegisterController.swift */,
+				C10D16702C144388004C76DA /* HomeController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -178,6 +181,7 @@
 				C10D16012C099BCA004C76DA /* AppDelegate.swift in Sources */,
 				C10D16192C099CA3004C76DA /* LoginController.swift in Sources */,
 				C10D166A2C0B1201004C76DA /* FileManager.swift in Sources */,
+				C10D16712C144388004C76DA /* HomeController.swift in Sources */,
 				C10D160B2C099BCA004C76DA /* LiveScoreApp.xcdatamodeld in Sources */,
 				C10D16032C099BCA004C76DA /* SceneDelegate.swift in Sources */,
 				C10D166F2C0B150E004C76DA /* User.swift in Sources */,

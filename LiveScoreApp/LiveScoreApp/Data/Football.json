@@ -1,0 +1,42 @@
+[
+    {
+        "name": "Spain",
+        "leagues": [
+            {
+                "name": "La Liga",
+                "teams": [
+                    "Real Madrid",
+                    "Barcelona",
+                    "Atletico Madrid",
+                    "Sevilla FC"
+                ],
+                "live_match": {
+                    "home_team": "Real Madrid",
+                    "away_team": "Barcelona",
+                    "home_score": "1",
+                    "away_score": "1"
+                }
+            }
+        ]
+    },
+    {
+        "name": "England",
+        "leagues": [
+            {
+                "name": "Premier League",
+                "teams": [
+                    "Manchester United",
+                    "Liverpool",
+                    "Manchester City",
+                    "Chelsea"
+                ],
+                "live_match": {
+                    "home_team": "Manchester United",
+                    "away_team": "Liverpool",
+                    "home_score": "2",
+                    "away_score": "2"
+                }
+            }
+        ]
+    }
+]

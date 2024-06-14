@@ -18,6 +18,11 @@
 		C10D166A2C0B1201004C76DA /* FileManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C10D16692C0B1201004C76DA /* FileManager.swift */; };
 		C10D166F2C0B150E004C76DA /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = C10D166E2C0B150E004C76DA /* User.swift */; };
 		C10D16712C144388004C76DA /* HomeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C10D16702C144388004C76DA /* HomeController.swift */; };
+		C1E594A02C1C22740050F080 /* FavoritesController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1E5949F2C1C22740050F080 /* FavoritesController.swift */; };
+		C1E594A32C1C25AB0050F080 /* Football.json in Resources */ = {isa = PBXBuildFile; fileRef = C1E594A22C1C25AB0050F080 /* Football.json */; };
+		C1E594A52C1C27160050F080 /* Football.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1E594A42C1C27160050F080 /* Football.swift */; };
+		C1E594A92C1C325D0050F080 /* LiveCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1E594A72C1C325D0050F080 /* LiveCell.swift */; };
+		C1E594AA2C1C325D0050F080 /* LiveCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C1E594A82C1C325D0050F080 /* LiveCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +39,11 @@
 		C10D16692C0B1201004C76DA /* FileManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileManager.swift; sourceTree = "<group>"; };
 		C10D166E2C0B150E004C76DA /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		C10D16702C144388004C76DA /* HomeController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeController.swift; sourceTree = "<group>"; };
+		C1E5949F2C1C22740050F080 /* FavoritesController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesController.swift; sourceTree = "<group>"; };
+		C1E594A22C1C25AB0050F080 /* Football.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = Football.json; sourceTree = "<group>"; };
+		C1E594A42C1C27160050F080 /* Football.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Football.swift; sourceTree = "<group>"; };
+		C1E594A72C1C325D0050F080 /* LiveCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LiveCell.swift; sourceTree = "<group>"; };
+		C1E594A82C1C325D0050F080 /* LiveCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LiveCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,6 +76,8 @@
 		C10D15FF2C099BCA004C76DA /* LiveScoreApp */ = {
 			isa = PBXGroup;
 			children = (
+				C1E594A62C1C32440050F080 /* Cell */,
+				C1E594A12C1C25950050F080 /* Data */,
 				C10D166B2C0B14EE004C76DA /* Model */,
 				C10D16682C0B11E4004C76DA /* Manager */,
 				C10D16172C099C3E004C76DA /* Controller */,
@@ -86,6 +98,7 @@
 				C10D16182C099CA3004C76DA /* LoginController.swift */,
 				C10D161A2C099CF2004C76DA /* RegisterController.swift */,
 				C10D16702C144388004C76DA /* HomeController.swift */,
+				C1E5949F2C1C22740050F080 /* FavoritesController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -102,8 +115,26 @@
 			isa = PBXGroup;
 			children = (
 				C10D166E2C0B150E004C76DA /* User.swift */,
+				C1E594A42C1C27160050F080 /* Football.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		C1E594A12C1C25950050F080 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				C1E594A22C1C25AB0050F080 /* Football.json */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		C1E594A62C1C32440050F080 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				C1E594A72C1C325D0050F080 /* LiveCell.swift */,
+				C1E594A82C1C325D0050F080 /* LiveCell.xib */,
+			);
+			path = Cell;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -164,9 +195,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C1E594A32C1C25AB0050F080 /* Football.json in Resources */,
 				C10D160D2C099BCB004C76DA /* Assets.xcassets in Resources */,
 				C10D16102C099BCB004C76DA /* Base in Resources */,
 				C10D16082C099BCA004C76DA /* Base in Resources */,
+				C1E594AA2C1C325D0050F080 /* LiveCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -177,8 +210,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C1E594A52C1C27160050F080 /* Football.swift in Sources */,
 				C10D161B2C099CF2004C76DA /* RegisterController.swift in Sources */,
 				C10D16012C099BCA004C76DA /* AppDelegate.swift in Sources */,
+				C1E594A02C1C22740050F080 /* FavoritesController.swift in Sources */,
+				C1E594A92C1C325D0050F080 /* LiveCell.swift in Sources */,
 				C10D16192C099CA3004C76DA /* LoginController.swift in Sources */,
 				C10D166A2C0B1201004C76DA /* FileManager.swift in Sources */,
 				C10D16712C144388004C76DA /* HomeController.swift in Sources */,

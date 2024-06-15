@@ -10,11 +10,11 @@
                     "Atletico Madrid",
                     "Sevilla FC"
                 ],
-                "live_match": {
-                    "home_team": "Real Madrid",
-                    "away_team": "Barcelona",
-                    "home_score": "1",
-                    "away_score": "1"
+                "liveMatch": {
+                    "homeTeam": "Real Madrid",
+                    "awayTeam": "Barcelona",
+                    "homeScore": "1",
+                    "awayScore": "1"
                 }
             }
         ]
@@ -30,11 +30,11 @@
                     "Manchester City",
                     "Chelsea"
                 ],
-                "live_match": {
-                    "home_team": "Manchester United",
-                    "away_team": "Liverpool",
-                    "home_score": "2",
-                    "away_score": "2"
+                "liveMatch": {
+                    "homeTeam": "Manchester United",
+                    "awayTeam": "Liverpool",
+                    "homeScore": "2",
+                    "awayScore": "2"
                 }
             }
         ]

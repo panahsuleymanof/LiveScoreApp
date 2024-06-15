@@ -15,12 +15,29 @@ struct Country: Codable {
 struct League: Codable {
     let name: String
     let teams: [String]
-    let live_match: LiveMatch
+    let liveMatch: LiveMatch
 }
 
-struct LiveMatch: Codable {
-    let home_team: String
-    let away_team: String
-    let home_score: String
-    let away_score: String
+struct LiveMatch: Codable, LiveCellProtocol {
+    let homeTeam: String
+    let awayTeam: String
+    let homeScore: String
+    let awayScore: String
+    
+    // MARK: LiveCellProtocol
+    var cellHomeName: String {
+        homeTeam
+    }
+    
+    var cellAwayName: String {
+        awayTeam
+    }
+    
+    var cellHomeScore: String {
+        homeScore
+    }
+    
+    var cellAwayScore: String {
+        awayScore
+    }
 }

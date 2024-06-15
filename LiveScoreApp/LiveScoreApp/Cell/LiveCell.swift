@@ -7,6 +7,14 @@
 
 import UIKit
 
+protocol LiveCellProtocol {
+    var cellHomeName: String { get }
+    var cellAwayName: String { get }
+    var cellHomeScore: String { get }
+    var cellAwayScore: String { get }
+}
+
+
 class LiveCell: UITableViewCell {
 
     @IBOutlet weak var homeName: UILabel!
@@ -24,5 +32,12 @@ class LiveCell: UITableViewCell {
     }
     
     @IBAction func favoritesTapped(_ sender: Any) {
+    }
+    
+    func configureCell(data: LiveCellProtocol) {
+        homeName.text = data.cellHomeName
+        awayName.text = data.cellAwayName
+        homeScore.text = data.cellHomeScore
+        awayScore.text = data.cellAwayScore
     }
 }

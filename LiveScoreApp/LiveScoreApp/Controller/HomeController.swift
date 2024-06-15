@@ -44,15 +44,12 @@ class HomeController: UIViewController {
 
 extension HomeController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        1
+        countries.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "\(LiveCell.self)", for: indexPath) as! LiveCell
-        cell.homeName.text = "\(countries[indexPath.row].leagues[indexPath.row].live_match.home_team)"
-        cell.awayName.text = "\(countries[indexPath.row].leagues[indexPath.row].live_match.away_team)"
-        cell.homeScore.text = "\(countries[indexPath.row].leagues[indexPath.row].live_match.home_score)"
-        cell.awayScore.text = "\(countries[indexPath.row].leagues[indexPath.row].live_match.away_score)"
+        cell.configureCell(data: countries[indexPath.row].leagues[0].liveMatch)
         return cell
     }
     
@@ -60,6 +57,6 @@ extension HomeController: UITableViewDataSource {
 
 extension HomeController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        70
+        120
     }
 }

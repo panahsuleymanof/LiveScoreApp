@@ -18,7 +18,7 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Home Team Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Dsj-dp-m0M">
-                        <rect key="frame" x="68" y="66" width="120.66666666666669" height="17"/>
+                        <rect key="frame" x="68" y="64" width="120.66666666666669" height="17"/>
                         <fontDescription key="fontDescription" type="system" weight="medium" pointSize="14"/>
                         <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <nil key="highlightedColor"/>
@@ -30,7 +30,7 @@
                         <nil key="highlightedColor"/>
                     </label>
                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="s8d-tv-auc">
-                        <rect key="frame" x="8" y="70" width="52" height="34.333333333333343"/>
+                        <rect key="frame" x="8" y="68" width="52" height="34.333333333333343"/>
                         <state key="normal" title="Button"/>
                         <buttonConfiguration key="configuration" style="plain" image="star" catalog="system">
                             <color key="baseForegroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -40,10 +40,38 @@
                         </connections>
                     </button>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="P8t-Sl-yUI">
-                        <rect key="frame" x="0.0" y="0.0" width="412" height="58"/>
+                        <rect key="frame" x="0.0" y="0.0" width="412" height="56"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="League Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bOj-AB-VSa">
+                                <rect key="frame" x="56.999999999999993" y="10" width="94.333333333333314" height="18"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleSubhead"/>
+                                <color key="textColor" systemColor="systemYellowColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="soccerball" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="KaC-1P-0VF">
+                                <rect key="frame" x="16" y="13.333333333333332" width="37" height="29.999999999999996"/>
+                                <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="31.329999999999998" id="AdS-z2-oku"/>
+                                    <constraint firstAttribute="width" constant="37" id="M0t-gD-NZc"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Country Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cVc-kX-UO3">
+                                <rect key="frame" x="57.000000000000007" y="29.999999999999996" width="75.666666666666686" height="14.333333333333332"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" red="0.0" green="0.11764705882352941" blue="0.15686274509803921" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstAttribute="height" constant="58" id="dn8-d2-e1w"/>
+                            <constraint firstItem="cVc-kX-UO3" firstAttribute="leading" secondItem="bOj-AB-VSa" secondAttribute="leading" id="CZf-4V-9vh"/>
+                            <constraint firstItem="KaC-1P-0VF" firstAttribute="leading" secondItem="P8t-Sl-yUI" secondAttribute="leading" constant="16" id="Ql4-vL-b41"/>
+                            <constraint firstItem="cVc-kX-UO3" firstAttribute="top" secondItem="bOj-AB-VSa" secondAttribute="bottom" constant="2" id="a2h-KK-f4j"/>
+                            <constraint firstItem="bOj-AB-VSa" firstAttribute="leading" secondItem="KaC-1P-0VF" secondAttribute="trailing" constant="4" id="cJj-jI-Ga5"/>
+                            <constraint firstAttribute="height" constant="56" id="dn8-d2-e1w"/>
+                            <constraint firstItem="bOj-AB-VSa" firstAttribute="top" secondItem="P8t-Sl-yUI" secondAttribute="top" constant="10" id="rb2-RM-sg0"/>
+                            <constraint firstItem="KaC-1P-0VF" firstAttribute="centerY" secondItem="P8t-Sl-yUI" secondAttribute="centerY" id="xsM-qS-zwI"/>
                         </constraints>
                     </view>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="o7S-8O-Yma">
@@ -53,7 +81,7 @@
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AES-Qo-ebz">
-                        <rect key="frame" x="386" y="66" width="10" height="18"/>
+                        <rect key="frame" x="386" y="64" width="10" height="18"/>
                         <fontDescription key="fontDescription" type="system" pointSize="15"/>
                         <color key="textColor" systemColor="systemRedColor"/>
                         <nil key="highlightedColor"/>
@@ -80,16 +108,22 @@
             <connections>
                 <outlet property="awayName" destination="qZC-KY-dDq" id="Tk6-pP-BDM"/>
                 <outlet property="awayScore" destination="o7S-8O-Yma" id="4dI-Fz-NMO"/>
+                <outlet property="countryName" destination="cVc-kX-UO3" id="pYu-li-GAk"/>
                 <outlet property="homeName" destination="Dsj-dp-m0M" id="tpp-07-j4m"/>
                 <outlet property="homeScore" destination="AES-Qo-ebz" id="73X-1P-l4W"/>
+                <outlet property="leagueName" destination="bOj-AB-VSa" id="cnP-ws-k3P"/>
             </connections>
-            <point key="canvasLocation" x="190.83969465648855" y="24.295774647887324"/>
+            <point key="canvasLocation" x="196.94656488549617" y="36.971830985915496"/>
         </tableViewCell>
     </objects>
     <resources>
+        <image name="soccerball" catalog="system" width="128" height="123"/>
         <image name="star" catalog="system" width="128" height="116"/>
         <systemColor name="systemRedColor">
             <color red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemYellowColor">
+            <color red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

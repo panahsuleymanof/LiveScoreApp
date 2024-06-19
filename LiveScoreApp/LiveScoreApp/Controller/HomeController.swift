@@ -50,6 +50,10 @@ extension HomeController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "\(LiveCell.self)", for: indexPath) as! LiveCell
         cell.configureCell(data: countries[indexPath.row].leagues[0].liveMatch)
+        cell.navigationCallback = {
+            let vc = self.storyboard?.instantiateViewController(identifier: "\(CountryController.self)") as! CountryController
+            self.navigationController?.show(vc, sender: nil)
+        }
         return cell
     }
     

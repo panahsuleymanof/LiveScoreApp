@@ -19,6 +19,8 @@ struct League: Codable {
 }
 
 struct LiveMatch: Codable, LiveCellProtocol {
+
+    
     let homeTeam: String
     let awayTeam: String
     let homeScore: String
@@ -40,4 +42,6 @@ struct LiveMatch: Codable, LiveCellProtocol {
     var cellAwayScore: String {
         awayScore
     }
+    
+
 }

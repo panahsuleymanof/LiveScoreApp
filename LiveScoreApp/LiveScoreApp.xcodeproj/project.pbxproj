@@ -23,6 +23,7 @@
 		C1E594A52C1C27160050F080 /* Football.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1E594A42C1C27160050F080 /* Football.swift */; };
 		C1E594A92C1C325D0050F080 /* LiveCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1E594A72C1C325D0050F080 /* LiveCell.swift */; };
 		C1E594AA2C1C325D0050F080 /* LiveCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C1E594A82C1C325D0050F080 /* LiveCell.xib */; };
+		C1E594CE2C2333B70050F080 /* CountryController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1E594CD2C2333B70050F080 /* CountryController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -44,6 +45,7 @@
 		C1E594A42C1C27160050F080 /* Football.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Football.swift; sourceTree = "<group>"; };
 		C1E594A72C1C325D0050F080 /* LiveCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LiveCell.swift; sourceTree = "<group>"; };
 		C1E594A82C1C325D0050F080 /* LiveCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LiveCell.xib; sourceTree = "<group>"; };
+		C1E594CD2C2333B70050F080 /* CountryController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,6 +101,7 @@
 				C10D161A2C099CF2004C76DA /* RegisterController.swift */,
 				C10D16702C144388004C76DA /* HomeController.swift */,
 				C1E5949F2C1C22740050F080 /* FavoritesController.swift */,
+				C1E594CD2C2333B70050F080 /* CountryController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -216,6 +219,7 @@
 				C1E594A02C1C22740050F080 /* FavoritesController.swift in Sources */,
 				C1E594A92C1C325D0050F080 /* LiveCell.swift in Sources */,
 				C10D16192C099CA3004C76DA /* LoginController.swift in Sources */,
+				C1E594CE2C2333B70050F080 /* CountryController.swift in Sources */,
 				C10D166A2C0B1201004C76DA /* FileManager.swift in Sources */,
 				C10D16712C144388004C76DA /* HomeController.swift in Sources */,
 				C10D160B2C099BCA004C76DA /* LiveScoreApp.xcdatamodeld in Sources */,

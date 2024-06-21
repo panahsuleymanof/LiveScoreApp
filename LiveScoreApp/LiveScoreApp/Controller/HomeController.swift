@@ -12,11 +12,23 @@ class HomeController: UIViewController {
     @IBOutlet weak var tableView: UITableView!
     
     var countries = [Country]()
+    var liveMatches: [(countryName: String, leagueName: String, liveMatch: LiveMatch)] = []
+    var tappedCountry = [League]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         parseFootballFile()
+        extractLiveMatches()
         tableView.register(UINib(nibName: "\(LiveCell.self)", bundle: nil), forCellReuseIdentifier: "\(LiveCell.self)")
+    }
+    
+    func extractLiveMatches() {
+        for country in countries {
+            for league in country.leagues {
+                let matchData = (countryName: country.name, leagueName: league.name, liveMatch: league.liveMatch)
+                liveMatches.append(matchData)
+            }
+        }
     }
     
     func parseFootballFile() {
@@ -24,7 +36,6 @@ class HomeController: UIViewController {
             do {
                 let data = try Data(contentsOf: file)
                 countries = try JSONDecoder().decode([Country].self, from: data)
-                print("football: \(countries)")
             } catch {
                 showError(message: error.localizedDescription)
             }
@@ -44,21 +55,26 @@ class HomeController: UIViewController {
 
 extension HomeController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        countries.count
+        liveMatches.count
     }
+    
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "\(LiveCell.self)", for: indexPath) as! LiveCell
-        cell.configureCell(data: countries[indexPath.row].leagues[0].liveMatch)
-        cell.configureCountryandLeague(country: countries[indexPath.row].name, league: countries[indexPath.row].leagues[0].name)
+        let matchData = liveMatches[indexPath.row]
+        cell.configureCell(data: matchData.liveMatch)
+        cell.configureCountryandLeague(country: matchData.countryName, league: matchData.leagueName)
         cell.navigationCallback = {
             let vc = self.storyboard?.instantiateViewController(identifier: "\(CountryController.self)") as! CountryController
-            vc.title = self.countries[indexPath.row].name
+            vc.title = matchData.countryName
+            if let leagueIndex = self.countries.firstIndex(where: {$0.name == matchData.countryName}) {
+                self.tappedCountry = self.countries[leagueIndex].leagues
+            }
+            vc.leagues = self.tappedCountry
             self.navigationController?.show(vc, sender: nil)
         }
         return cell
     }
-    
 }
 
 extension HomeController: UITableViewDelegate {

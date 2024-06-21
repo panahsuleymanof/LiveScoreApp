@@ -198,10 +198,10 @@
             </objects>
             <point key="canvasLocation" x="3592" y="808"/>
         </scene>
-        <!--View Controller-->
+        <!--Favorites Controller-->
         <scene sceneID="5U3-H1-iTP">
             <objects>
-                <viewController id="v03-x0-OqP" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="FavoritesController" id="v03-x0-OqP" customClass="FavoritesController" customModule="LiveScoreApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="EEU-Dn-Pvk">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -214,20 +214,39 @@
             </objects>
             <point key="canvasLocation" x="3592" y="85"/>
         </scene>
-        <!--Favorites Controller-->
+        <!--Teams Controller-->
         <scene sceneID="bt2-dD-7JH">
             <objects>
-                <viewController storyboardIdentifier="FavoritesController" id="0xz-YF-grb" customClass="FavoritesController" customModule="LiveScoreApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="TeamsController" id="0xz-YF-grb" customClass="TeamsController" customModule="LiveScoreApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="tJn-Fz-QMq">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="h2y-HW-U99">
+                                <rect key="frame" x="0.0" y="59" width="393" height="759"/>
+                                <color key="backgroundColor" red="0.0039215686274509803" green="0.039215686274509803" blue="0.058823529411764705" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="0xz-YF-grb" id="Nkc-fn-Yof"/>
+                                    <outlet property="delegate" destination="0xz-YF-grb" id="Sc3-Tj-HZD"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="39N-hp-Dz9"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" red="0.0039215686274509803" green="0.039215686274509803" blue="0.058823529411764705" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="39N-hp-Dz9" firstAttribute="trailing" secondItem="h2y-HW-U99" secondAttribute="trailing" id="C0c-De-S2x"/>
+                            <constraint firstItem="h2y-HW-U99" firstAttribute="top" secondItem="39N-hp-Dz9" secondAttribute="top" id="FMu-9d-DrO"/>
+                            <constraint firstItem="39N-hp-Dz9" firstAttribute="bottom" secondItem="h2y-HW-U99" secondAttribute="bottom" id="Ru9-LV-x9E"/>
+                            <constraint firstItem="h2y-HW-U99" firstAttribute="leading" secondItem="39N-hp-Dz9" secondAttribute="leading" id="bGK-yh-bb9"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="table" destination="h2y-HW-U99" id="cvf-pf-GVV"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="sGg-w0-11v" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4488" y="85"/>
+            <point key="canvasLocation" x="5079" y="-615"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="nzT-9K-Bp6">
@@ -237,8 +256,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" red="0.0" green="0.078431372549019607" blue="0.11764705882352941" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        <color key="tintColor" systemColor="systemRedColor"/>
-                        <color key="barTintColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="tintColor" red="0.0039215686274509803" green="0.039215686274509803" blue="0.058823529411764705" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="barTintColor" red="0.0039215686274509803" green="0.039215686274509803" blue="0.058823529411764705" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <color key="selectedImageTintColor" systemColor="systemRedColor"/>
                     </tabBar>
                     <connections>
@@ -271,6 +290,7 @@
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="Eao-ED-fAK"/>
                         <color key="backgroundColor" red="0.0039215686274509803" green="0.039215686274509803" blue="0.058823529411764705" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="tintColor" red="0.0039215686274509803" green="0.039215686274509803" blue="0.058823529411764705" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="Eao-ED-fAK" firstAttribute="bottom" secondItem="4l1-T1-brq" secondAttribute="bottom" id="CDp-8u-XNI"/>
                             <constraint firstItem="4l1-T1-brq" firstAttribute="top" secondItem="Eao-ED-fAK" secondAttribute="top" id="EPM-F2-0GU"/>
@@ -278,7 +298,9 @@
                             <constraint firstItem="4l1-T1-brq" firstAttribute="leading" secondItem="Eao-ED-fAK" secondAttribute="leading" id="t7G-9p-AgU"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="3Co-k9-ACR"/>
+                    <navigationItem key="navigationItem" id="3Co-k9-ACR">
+                        <barButtonItem key="leftBarButtonItem" title="Item" image="mini_logo" id="H9m-bY-feB"/>
+                    </navigationItem>
                     <connections>
                         <outlet property="tableView" destination="4l1-T1-brq" id="KUq-R1-dNQ"/>
                     </connections>
@@ -294,13 +316,32 @@
                     <view key="view" contentMode="scaleToFill" id="2GH-R9-l1F">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="sA3-Gh-TyG">
+                                <rect key="frame" x="0.0" y="59" width="393" height="759"/>
+                                <color key="backgroundColor" red="0.0039215686274509803" green="0.039215686274509803" blue="0.058823529411764705" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="V1n-C2-qgg" id="GmP-yG-TEd"/>
+                                    <outlet property="delegate" destination="V1n-C2-qgg" id="BOO-Gn-os1"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="4LQ-ty-ZQg"/>
                         <color key="backgroundColor" red="0.0039215686274509803" green="0.039215686274509803" blue="0.058823529411764705" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="sA3-Gh-TyG" firstAttribute="top" secondItem="4LQ-ty-ZQg" secondAttribute="top" id="JBA-YJ-fEy"/>
+                            <constraint firstItem="4LQ-ty-ZQg" firstAttribute="trailing" secondItem="sA3-Gh-TyG" secondAttribute="trailing" id="K96-mO-wBg"/>
+                            <constraint firstItem="sA3-Gh-TyG" firstAttribute="leading" secondItem="4LQ-ty-ZQg" secondAttribute="leading" id="uAx-8g-9To"/>
+                            <constraint firstItem="4LQ-ty-ZQg" firstAttribute="bottom" secondItem="sA3-Gh-TyG" secondAttribute="bottom" id="zX3-Ju-hte"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="table" destination="sA3-Gh-TyG" id="4QW-Kc-nmi"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="723-dI-MRP" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4363" y="-615"/>
+            <point key="canvasLocation" x="4362.5954198473282" y="-615.49295774647885"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="fuA-IL-ajc">
@@ -330,6 +371,7 @@
                         <rect key="frame" x="0.0" y="59" width="393" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" red="0.0" green="0.078431372549019607" blue="0.11764705882352941" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="barTintColor" red="0.0" green="0.078431372549019607" blue="0.11764705882352941" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <textAttributes key="largeTitleTextAttributes">
                             <color key="textColor" systemColor="labelColor"/>
                         </textAttributes>
@@ -395,9 +437,6 @@
         </namedColor>
         <systemColor name="labelColor">
             <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
-        <systemColor name="systemBackgroundColor">
-            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
         <systemColor name="systemFillColor">
             <color red="0.47058823529999999" green="0.47058823529999999" blue="0.50196078430000002" alpha="0.20000000000000001" colorSpace="custom" customColorSpace="sRGB"/>

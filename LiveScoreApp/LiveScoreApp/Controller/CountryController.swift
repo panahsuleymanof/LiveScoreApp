@@ -8,11 +8,11 @@
 import UIKit
 
 class CountryController: UIViewController {
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        title = "Countries"
+        self.navigationController?.navigationBar.titleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.lightGray]
     }
     
-
+    
 }

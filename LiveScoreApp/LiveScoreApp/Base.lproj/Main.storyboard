@@ -262,6 +262,7 @@
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="4l1-T1-brq">
                                 <rect key="frame" x="0.0" y="103" width="393" height="666"/>
                                 <color key="backgroundColor" red="0.0039215686274509803" green="0.039215686274509803" blue="0.058823529411764705" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="tintColor" red="0.0039215686274509803" green="0.039215686274509803" blue="0.058823529411764705" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <connections>
                                     <outlet property="dataSource" destination="dSO-MO-uQU" id="02T-Rk-Wch"/>
                                     <outlet property="delegate" destination="dSO-MO-uQU" id="yk8-5T-iBP"/>
@@ -272,19 +273,19 @@
                         <color key="backgroundColor" red="0.0039215686274509803" green="0.039215686274509803" blue="0.058823529411764705" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="Eao-ED-fAK" firstAttribute="bottom" secondItem="4l1-T1-brq" secondAttribute="bottom" id="CDp-8u-XNI"/>
+                            <constraint firstItem="4l1-T1-brq" firstAttribute="top" secondItem="Eao-ED-fAK" secondAttribute="top" id="EPM-F2-0GU"/>
                             <constraint firstItem="Eao-ED-fAK" firstAttribute="trailing" secondItem="4l1-T1-brq" secondAttribute="trailing" id="HFM-oM-x9G"/>
-                            <constraint firstItem="4l1-T1-brq" firstAttribute="top" secondItem="Eao-ED-fAK" secondAttribute="top" id="TJM-eo-r7V"/>
                             <constraint firstItem="4l1-T1-brq" firstAttribute="leading" secondItem="Eao-ED-fAK" secondAttribute="leading" id="t7G-9p-AgU"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="JVP-g0-2nH"/>
+                    <navigationItem key="navigationItem" id="3Co-k9-ACR"/>
                     <connections>
                         <outlet property="tableView" destination="4l1-T1-brq" id="KUq-R1-dNQ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bn1-M3-bi5" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3592" y="-615"/>
+            <point key="canvasLocation" x="3591.6030534351144" y="-615.49295774647885"/>
         </scene>
         <!--Country Controller-->
         <scene sceneID="fw2-4g-DDS">
@@ -342,11 +343,11 @@
             </objects>
             <point key="canvasLocation" x="2665" y="-615"/>
         </scene>
-        <!--Standings-->
+        <!--Favorites-->
         <scene sceneID="RxI-T6-NKx">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="bWc-vp-34d" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Standings" image="Chart" id="ak5-7R-fov"/>
+                    <tabBarItem key="tabBarItem" title="Favorites" image="Chart" id="ak5-7R-fov"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="Qbr-hF-vsf">
                         <rect key="frame" x="0.0" y="59" width="393" height="44"/>

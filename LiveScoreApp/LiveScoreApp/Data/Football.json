@@ -16,6 +16,21 @@
                     "homeScore": "1",
                     "awayScore": "1"
                 }
+            },
+            {
+                "name": "Segunda Division",
+                "teams": [
+                    "Espanyol",
+                    "Malaga",
+                    "Real Zaragoza",
+                    "Sporting Gijon"
+                ],
+                "liveMatch": {
+                    "homeTeam": "Espanyol",
+                    "awayTeam": "Malaga",
+                    "homeScore": "0",
+                    "awayScore": "1"
+                }
             }
         ]
     },
@@ -35,6 +50,301 @@
                     "awayTeam": "Liverpool",
                     "homeScore": "2",
                     "awayScore": "2"
+                }
+            },
+            {
+                "name": "Championship",
+                "teams": [
+                    "Leeds United",
+                    "Nottingham Forest",
+                    "Aston Villa",
+                    "West Bromwich Albion"
+                ],
+                "liveMatch": {
+                    "homeTeam": "Leeds United",
+                    "awayTeam": "Nottingham Forest",
+                    "homeScore": "1",
+                    "awayScore": "0"
+                }
+            }
+        ]
+    },
+    {
+        "name": "Germany",
+        "leagues": [
+            {
+                "name": "Bundesliga",
+                "teams": [
+                    "Bayern Munich",
+                    "Borussia Dortmund",
+                    "RB Leipzig",
+                    "Bayer Leverkusen"
+                ],
+                "liveMatch": {
+                    "homeTeam": "Bayern Munich",
+                    "awayTeam": "Borussia Dortmund",
+                    "homeScore": "3",
+                    "awayScore": "2"
+                }
+            },
+            {
+                "name": "2. Bundesliga",
+                "teams": [
+                    "Hamburger SV",
+                    "FC St. Pauli",
+                    "Hannover 96",
+                    "1. FC Nürnberg"
+                ],
+                "liveMatch": {
+                    "homeTeam": "Hamburger SV",
+                    "awayTeam": "FC St. Pauli",
+                    "homeScore": "1",
+                    "awayScore": "1"
+                }
+            }
+        ]
+    },
+    {
+        "name": "Italy",
+        "leagues": [
+            {
+                "name": "Serie A",
+                "teams": [
+                    "Juventus",
+                    "AC Milan",
+                    "Inter Milan",
+                    "AS Roma"
+                ],
+                "liveMatch": {
+                    "homeTeam": "Juventus",
+                    "awayTeam": "AC Milan",
+                    "homeScore": "1",
+                    "awayScore": "1"
+                }
+            },
+            {
+                "name": "Serie B",
+                "teams": [
+                    "Benevento",
+                    "Lecce",
+                    "Crotone",
+                    "Empoli"
+                ],
+                "liveMatch": {
+                    "homeTeam": "Benevento",
+                    "awayTeam": "Lecce",
+                    "homeScore": "0",
+                    "awayScore": "0"
+                }
+            }
+        ]
+    },
+    {
+        "name": "France",
+        "leagues": [
+            {
+                "name": "Ligue 1",
+                "teams": [
+                    "Paris Saint-Germain",
+                    "Marseille",
+                    "Lyon",
+                    "Monaco"
+                ],
+                "liveMatch": {
+                    "homeTeam": "Paris Saint-Germain",
+                    "awayTeam": "Marseille",
+                    "homeScore": "2",
+                    "awayScore": "2"
+                }
+            },
+            {
+                "name": "Ligue 2",
+                "teams": [
+                    "Toulouse",
+                    "Grenoble",
+                    "Auxerre",
+                    "Caen"
+                ],
+                "liveMatch": {
+                    "homeTeam": "Toulouse",
+                    "awayTeam": "Grenoble",
+                    "homeScore": "1",
+                    "awayScore": "1"
+                }
+            }
+        ]
+    },
+    {
+        "name": "Portugal",
+        "leagues": [
+            {
+                "name": "Primeira Liga",
+                "teams": [
+                    "Porto",
+                    "Benfica",
+                    "Sporting CP",
+                    "Braga"
+                ],
+                "liveMatch": {
+                    "homeTeam": "Porto",
+                    "awayTeam": "Benfica",
+                    "homeScore": "2",
+                    "awayScore": "2"
+                }
+            },
+            {
+                "name": "LigaPro",
+                "teams": [
+                    "Estoril",
+                    "Casa Pia",
+                    "Farense",
+                    "Feirense"
+                ],
+                "liveMatch": {
+                    "homeTeam": "Estoril",
+                    "awayTeam": "Casa Pia",
+                    "homeScore": "0",
+                    "awayScore": "1"
+                }
+            }
+        ]
+    },
+    {
+        "name": "Netherlands",
+        "leagues": [
+            {
+                "name": "Eredivisie",
+                "teams": [
+                    "Ajax",
+                    "PSV",
+                    "Feyenoord",
+                    "AZ Alkmaar"
+                ],
+                "liveMatch": {
+                    "homeTeam": "Ajax",
+                    "awayTeam": "PSV",
+                    "homeScore": "1",
+                    "awayScore": "0"
+                }
+            },
+            {
+                "name": "Eerste Divisie",
+                "teams": [
+                    "FC Volendam",
+                    "De Graafschap",
+                    "NAC Breda",
+                    "Roda JC"
+                ],
+                "liveMatch": {
+                    "homeTeam": "FC Volendam",
+                    "awayTeam": "De Graafschap",
+                    "homeScore": "2",
+                    "awayScore": "1"
+                }
+            }
+        ]
+    },
+    {
+        "name": "Brazil",
+        "leagues": [
+            {
+                "name": "Brasileirao Serie A",
+                "teams": [
+                    "Flamengo",
+                    "Palmeiras",
+                    "Santos",
+                    "Corinthians"
+                ],
+                "liveMatch": {
+                    "homeTeam": "Flamengo",
+                    "awayTeam": "Palmeiras",
+                    "homeScore": "1",
+                    "awayScore": "1"
+                }
+            },
+            {
+                "name": "Brasileirao Serie B",
+                "teams": [
+                    "Cruzeiro",
+                    "Vasco da Gama",
+                    "Botafogo",
+                    "Gremio"
+                ],
+                "liveMatch": {
+                    "homeTeam": "Cruzeiro",
+                    "awayTeam": "Vasco da Gama",
+                    "homeScore": "2",
+                    "awayScore": "0"
+                }
+            }
+        ]
+    },
+    {
+        "name": "Argentina",
+        "leagues": [
+            {
+                "name": "Primera Division",
+                "teams": [
+                    "Boca Juniors",
+                    "River Plate",
+                    "Racing Club",
+                    "Independiente"
+                ],
+                "liveMatch": {
+                    "homeTeam": "Boca Juniors",
+                    "awayTeam": "River Plate",
+                    "homeScore": "3",
+                    "awayScore": "2"
+                }
+            },
+            {
+                "name": "Primera B Nacional",
+                "teams": [
+                    "Sarmiento",
+                    "Ferro Carril Oeste",
+                    "San Martin",
+                    "Instituto"
+                ],
+                "liveMatch": {
+                    "homeTeam": "Sarmiento",
+                    "awayTeam": "Ferro Carril Oeste",
+                    "homeScore": "0",
+                    "awayScore": "0"
+                }
+            }
+        ]
+    },
+    {
+        "name": "United States",
+        "leagues": [
+            {
+                "name": "MLS",
+                "teams": [
+                    "LA Galaxy",
+                    "Seattle Sounders",
+                    "New York City FC",
+                    "Atlanta United"
+                ],
+                "liveMatch": {
+                    "homeTeam": "LA Galaxy",
+                    "awayTeam": "Seattle Sounders",
+                    "homeScore": "2",
+                    "awayScore": "1"
+                }
+            },
+            {
+                "name": "USL Championship",
+                "teams": [
+                    "Phoenix Rising",
+                    "Tampa Bay Rowdies",
+                    "Louisville City",
+                    "San Antonio FC"
+                ],
+                "liveMatch": {
+                    "homeTeam": "Phoenix Rising",
+                    "awayTeam": "Tampa Bay Rowdies",
+                    "homeScore": "1",
+                    "awayScore": "0"
                 }
             }
         ]

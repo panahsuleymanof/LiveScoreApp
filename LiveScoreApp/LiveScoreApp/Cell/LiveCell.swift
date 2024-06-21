@@ -49,4 +49,9 @@ class LiveCell: UITableViewCell {
         homeScore.text = data.cellHomeScore
         awayScore.text = data.cellAwayScore
     }
+    
+    func configureCountryandLeague(country: String, league: String) {
+        countryName.text = country
+        leagueName.text = league
+    }
 }

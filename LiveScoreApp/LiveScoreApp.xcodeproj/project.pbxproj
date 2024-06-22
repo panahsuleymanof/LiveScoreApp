@@ -18,6 +18,7 @@
 		C10D166A2C0B1201004C76DA /* FileManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C10D16692C0B1201004C76DA /* FileManager.swift */; };
 		C10D166F2C0B150E004C76DA /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = C10D166E2C0B150E004C76DA /* User.swift */; };
 		C10D16712C144388004C76DA /* HomeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C10D16702C144388004C76DA /* HomeController.swift */; };
+		C12449142C26DCE5009625FD /* ProfileController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C12449132C26DCE5009625FD /* ProfileController.swift */; };
 		C197A8AE2C262D1E00DFB2DA /* LeagueCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C197A8AD2C262D1E00DFB2DA /* LeagueCell.xib */; };
 		C197A8AF2C262D1E00DFB2DA /* LeagueCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C197A8AC2C262D1E00DFB2DA /* LeagueCell.swift */; };
 		C197A8B32C26316700DFB2DA /* TeamsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C197A8B22C26316700DFB2DA /* TeamsController.swift */; };
@@ -45,6 +46,7 @@
 		C10D16692C0B1201004C76DA /* FileManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileManager.swift; sourceTree = "<group>"; };
 		C10D166E2C0B150E004C76DA /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		C10D16702C144388004C76DA /* HomeController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeController.swift; sourceTree = "<group>"; };
+		C12449132C26DCE5009625FD /* ProfileController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileController.swift; sourceTree = "<group>"; };
 		C197A8AC2C262D1E00DFB2DA /* LeagueCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeagueCell.swift; sourceTree = "<group>"; };
 		C197A8AD2C262D1E00DFB2DA /* LeagueCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LeagueCell.xib; sourceTree = "<group>"; };
 		C197A8B22C26316700DFB2DA /* TeamsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamsController.swift; sourceTree = "<group>"; };
@@ -88,7 +90,7 @@
 		C10D15FF2C099BCA004C76DA /* LiveScoreApp */ = {
 			isa = PBXGroup;
 			children = (
-				C1E594A62C1C32440050F080 /* Cell */,
+				C1E594A62C1C32440050F080 /* XIB */,
 				C1E594A12C1C25950050F080 /* Data */,
 				C10D166B2C0B14EE004C76DA /* Model */,
 				C10D16682C0B11E4004C76DA /* Manager */,
@@ -113,6 +115,7 @@
 				C1E5949F2C1C22740050F080 /* FavoritesController.swift */,
 				C1E594CD2C2333B70050F080 /* CountryController.swift */,
 				C197A8B22C26316700DFB2DA /* TeamsController.swift */,
+				C12449132C26DCE5009625FD /* ProfileController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -169,14 +172,14 @@
 			path = Data;
 			sourceTree = "<group>";
 		};
-		C1E594A62C1C32440050F080 /* Cell */ = {
+		C1E594A62C1C32440050F080 /* XIB */ = {
 			isa = PBXGroup;
 			children = (
 				C197A8B42C26335D00DFB2DA /* Teams */,
 				C197A8AB2C262D0800DFB2DA /* Leagues */,
 				C197A8AA2C262CDB00DFB2DA /* LiveMatches */,
 			);
-			path = Cell;
+			path = XIB;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -261,6 +264,7 @@
 				C10D16012C099BCA004C76DA /* AppDelegate.swift in Sources */,
 				C1E594A02C1C22740050F080 /* FavoritesController.swift in Sources */,
 				C1E594A92C1C325D0050F080 /* LiveCell.swift in Sources */,
+				C12449142C26DCE5009625FD /* ProfileController.swift in Sources */,
 				C10D16192C099CA3004C76DA /* LoginController.swift in Sources */,
 				C1E594CE2C2333B70050F080 /* CountryController.swift in Sources */,
 				C10D166A2C0B1201004C76DA /* FileManager.swift in Sources */,

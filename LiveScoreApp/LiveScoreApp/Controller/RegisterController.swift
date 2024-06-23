@@ -16,6 +16,7 @@ class RegisterController: UIViewController {
     
     let manager = FileManagerHelper()
     var users = [User]()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         

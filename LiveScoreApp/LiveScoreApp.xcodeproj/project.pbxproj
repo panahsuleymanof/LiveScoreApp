@@ -19,6 +19,9 @@
 		C10D166F2C0B150E004C76DA /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = C10D166E2C0B150E004C76DA /* User.swift */; };
 		C10D16712C144388004C76DA /* HomeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C10D16702C144388004C76DA /* HomeController.swift */; };
 		C12449142C26DCE5009625FD /* ProfileController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C12449132C26DCE5009625FD /* ProfileController.swift */; };
+		C12449192C2816A7009625FD /* LoggedUser+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = C12449172C2816A7009625FD /* LoggedUser+CoreDataClass.swift */; };
+		C124491A2C2816A7009625FD /* LoggedUser+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = C12449182C2816A7009625FD /* LoggedUser+CoreDataProperties.swift */; };
+		C124491C2C285191009625FD /* ChangeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C124491B2C285191009625FD /* ChangeController.swift */; };
 		C197A8AE2C262D1E00DFB2DA /* LeagueCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C197A8AD2C262D1E00DFB2DA /* LeagueCell.xib */; };
 		C197A8AF2C262D1E00DFB2DA /* LeagueCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C197A8AC2C262D1E00DFB2DA /* LeagueCell.swift */; };
 		C197A8B32C26316700DFB2DA /* TeamsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C197A8B22C26316700DFB2DA /* TeamsController.swift */; };
@@ -47,6 +50,9 @@
 		C10D166E2C0B150E004C76DA /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		C10D16702C144388004C76DA /* HomeController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeController.swift; sourceTree = "<group>"; };
 		C12449132C26DCE5009625FD /* ProfileController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileController.swift; sourceTree = "<group>"; };
+		C12449172C2816A7009625FD /* LoggedUser+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "LoggedUser+CoreDataClass.swift"; sourceTree = "<group>"; };
+		C12449182C2816A7009625FD /* LoggedUser+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "LoggedUser+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		C124491B2C285191009625FD /* ChangeController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangeController.swift; sourceTree = "<group>"; };
 		C197A8AC2C262D1E00DFB2DA /* LeagueCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeagueCell.swift; sourceTree = "<group>"; };
 		C197A8AD2C262D1E00DFB2DA /* LeagueCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LeagueCell.xib; sourceTree = "<group>"; };
 		C197A8B22C26316700DFB2DA /* TeamsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamsController.swift; sourceTree = "<group>"; };
@@ -102,6 +108,8 @@
 				C10D160E2C099BCB004C76DA /* LaunchScreen.storyboard */,
 				C10D16112C099BCB004C76DA /* Info.plist */,
 				C10D16092C099BCA004C76DA /* LiveScoreApp.xcdatamodeld */,
+				C12449172C2816A7009625FD /* LoggedUser+CoreDataClass.swift */,
+				C12449182C2816A7009625FD /* LoggedUser+CoreDataProperties.swift */,
 			);
 			path = LiveScoreApp;
 			sourceTree = "<group>";
@@ -116,6 +124,7 @@
 				C1E594CD2C2333B70050F080 /* CountryController.swift */,
 				C197A8B22C26316700DFB2DA /* TeamsController.swift */,
 				C12449132C26DCE5009625FD /* ProfileController.swift */,
+				C124491B2C285191009625FD /* ChangeController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -259,7 +268,10 @@
 			files = (
 				C1E594A52C1C27160050F080 /* Football.swift in Sources */,
 				C10D161B2C099CF2004C76DA /* RegisterController.swift in Sources */,
+				C124491C2C285191009625FD /* ChangeController.swift in Sources */,
 				C197A8B82C26337200DFB2DA /* TeamsCell.swift in Sources */,
+				C12449192C2816A7009625FD /* LoggedUser+CoreDataClass.swift in Sources */,
+				C124491A2C2816A7009625FD /* LoggedUser+CoreDataProperties.swift in Sources */,
 				C197A8AF2C262D1E00DFB2DA /* LeagueCell.swift in Sources */,
 				C10D16012C099BCA004C76DA /* AppDelegate.swift in Sources */,
 				C1E594A02C1C22740050F080 /* FavoritesController.swift in Sources */,

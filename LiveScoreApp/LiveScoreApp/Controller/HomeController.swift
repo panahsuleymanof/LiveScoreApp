@@ -55,6 +55,7 @@ class HomeController: UIViewController {
 }
 
 extension UIColor {
+    
     public convenience init?(hex: String) {
         let r, g, b, a: CGFloat
 
@@ -111,6 +112,9 @@ extension HomeController: UITableViewDataSource {
                                          width: self.table.frame.width,
                                          height: 120))
         view.backgroundColor = UIColor(hex: "#010A0F")
+        
+        let textfield = UITextField()
+        
         return view
     }
 }

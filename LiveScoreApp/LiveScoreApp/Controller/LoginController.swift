@@ -12,6 +12,8 @@ class LoginController: UIViewController {
     @IBOutlet weak var pswdField: UITextField!
     @IBOutlet weak var usernameField: UITextField!
     
+    let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
+    let loggedUser = [LoggedUser]()
     let userDefaults = UserDefaults.standard
     let manager = FileManagerHelper()
     var users = [User]()
@@ -32,6 +34,18 @@ class LoginController: UIViewController {
             attributes: [NSAttributedString.Key.foregroundColor: UIColor.lightGray])
     }
     
+    func saveItem(userName: String, userEmail: String, userPswd: String) {
+        do {
+            let model = LoggedUser(context: context)
+            model.name = userName
+            model.email = userEmail
+            model.password = userPswd
+            try context.save()
+        } catch {
+            print(error.localizedDescription)
+        }
+    }
+    
     @IBAction func signUpTapped(_ sender: Any) {
         let controller = storyboard?.instantiateViewController(identifier: "\(RegisterController.self)") as! RegisterController
         navigationController?.show(controller, sender: nil)
@@ -44,9 +58,11 @@ class LoginController: UIViewController {
                 manager.getUser { user in
                     self.users = user
                 }
-                if users.contains(where: {$0.email == name && $0.password == pswd}) {
+                
+                if let userIndex = users.firstIndex(where: {$0.email == name && $0.password == pswd}) {
                     userDefaults.set(true, forKey: "isLoggedIn")
                     let scene = UIApplication.shared.connectedScenes.first
+                    saveItem(userName: name, userEmail: users[userIndex].email, userPswd: pswd)
                     if let sceneDelegate: SceneDelegate = scene?.delegate as? SceneDelegate {
                         sceneDelegate.setHomeAsRoot()
                     }

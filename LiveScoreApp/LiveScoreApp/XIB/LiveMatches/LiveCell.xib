@@ -57,8 +57,8 @@
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Country Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cVc-kX-UO3">
-                                <rect key="frame" x="57.000000000000007" y="29.999999999999996" width="75.666666666666686" height="14.333333333333332"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                                <rect key="frame" x="57.000000000000007" y="29.999999999999996" width="81.666666666666686" height="14.333333333333332"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -112,6 +112,7 @@
                 <outlet property="homeName" destination="Dsj-dp-m0M" id="tpp-07-j4m"/>
                 <outlet property="homeScore" destination="AES-Qo-ebz" id="73X-1P-l4W"/>
                 <outlet property="leagueName" destination="bOj-AB-VSa" id="cnP-ws-k3P"/>
+                <outlet property="makeFavorite" destination="s8d-tv-auc" id="cVy-tJ-zJP"/>
             </connections>
             <point key="canvasLocation" x="196.94656488549617" y="36.971830985915496"/>
         </tableViewCell>

@@ -22,8 +22,11 @@ class LiveCell: UITableViewCell {
     @IBOutlet weak var awayName: UILabel!
     @IBOutlet weak var homeScore: UILabel!
     @IBOutlet weak var awayScore: UILabel!
+    @IBOutlet weak var makeFavorite: UIButton!
     
     var navigationCallback: (() -> Void)?
+    var favoriteCallBack: (() -> Void)?
+    var deleteCallBack: (() -> Void)?
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -41,6 +44,13 @@ class LiveCell: UITableViewCell {
     }
     
     @IBAction func favoritesTapped(_ sender: Any) {
+        if makeFavorite.backgroundColor == UIColor.red {
+            makeFavorite.backgroundColor = .none
+            deleteCallBack?()
+        } else {
+            makeFavorite.backgroundColor = .red
+            favoriteCallBack?()
+        }
     }
     
     func configureCell(data: LiveCellProtocol) {

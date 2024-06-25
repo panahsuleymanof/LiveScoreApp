@@ -28,7 +28,7 @@ extension CountryController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "\(LeagueCell.self)", for: indexPath) as! LeagueCell
-        cell.configureLeague(name: "\(leagues[indexPath.row].name)", image: "Home")
+        cell.configureLeague(name: "\(leagues[indexPath.row].name)", image: "flag")
         return cell
     }
 }

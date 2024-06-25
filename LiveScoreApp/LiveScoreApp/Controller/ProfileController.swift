@@ -24,7 +24,6 @@ class ProfileController: UIViewController {
         do {
             user = try context.fetch(LoggedUser.fetchRequest())
             userFullname.text = user[0].name
-            userEmail.text = user[0].email
         } catch {
             print(error.localizedDescription)
         }
@@ -45,6 +44,7 @@ class ProfileController: UIViewController {
     }
     
     @IBAction func logOutTapped(_ sender: Any) {
+        deleteItem(index: 0)
         let scene = UIApplication.shared.connectedScenes.first
         if let sceneDelegate: SceneDelegate = scene?.delegate as? SceneDelegate {
             sceneDelegate.setLoginAsRoot()

@@ -57,12 +57,13 @@ class LoginController: UIViewController {
             if !name.isEmpty && !pswd.isEmpty {
                 manager.getUser { user in
                     self.users = user
+                    print(users)
                 }
                 
                 if let userIndex = users.firstIndex(where: {$0.email == name && $0.password == pswd}) {
                     userDefaults.set(true, forKey: "isLoggedIn")
                     let scene = UIApplication.shared.connectedScenes.first
-                    saveItem(userName: name, userEmail: users[userIndex].email, userPswd: pswd)
+                    saveItem(userName: users[userIndex].fullname, userEmail: name, userPswd: pswd)
                     if let sceneDelegate: SceneDelegate = scene?.delegate as? SceneDelegate {
                         sceneDelegate.setHomeAsRoot()
                     }

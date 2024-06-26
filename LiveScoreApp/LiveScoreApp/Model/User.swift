@@ -9,5 +9,5 @@ import Foundation
 struct User: Codable {
     let fullname: String
     let email: String
-    let password: String
+    var password: String
 }

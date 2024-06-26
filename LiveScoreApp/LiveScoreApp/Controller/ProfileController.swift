@@ -13,17 +13,19 @@ class ProfileController: UIViewController {
     @IBOutlet weak var userEmail: UILabel!
     
     var user = [LoggedUser]()
+    var manager = FileManagerHelper()
     let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
     
     override func viewDidLoad() {
         super.viewDidLoad()
         fetchUser()
+        print(user)
     }
     
     func fetchUser() {
         do {
             user = try context.fetch(LoggedUser.fetchRequest())
-            userFullname.text = user[0].name
+            userFullname.text = user[0].password
         } catch {
             print(error.localizedDescription)
         }
@@ -44,6 +46,7 @@ class ProfileController: UIViewController {
     }
     
     @IBAction func logOutTapped(_ sender: Any) {
+        UserDefaults.standard.set(false, forKey: "isLoggedIn")
         deleteItem(index: 0)
         let scene = UIApplication.shared.connectedScenes.first
         if let sceneDelegate: SceneDelegate = scene?.delegate as? SceneDelegate {
@@ -52,10 +55,16 @@ class ProfileController: UIViewController {
     }
     
     @IBAction func deleteAccountTapped(_ sender: Any) {
-        deleteItem(index: 0)
-        let scene = UIApplication.shared.connectedScenes.first
-        if let sceneDelegate: SceneDelegate = scene?.delegate as? SceneDelegate {
-            sceneDelegate.setLoginAsRoot()
-        }
+        manager.getUser(complete: { users in
+            if let userIndex = users.firstIndex(where: {$0.email == user[0].email && $0.password == user[0].password}) {
+                UserDefaults.standard.set(false, forKey: "isLoggedIn")
+                deleteItem(index: 0)
+                manager.deleteUser(index: userIndex)
+                let scene = UIApplication.shared.connectedScenes.first
+                if let sceneDelegate: SceneDelegate = scene?.delegate as? SceneDelegate {
+                    sceneDelegate.setLoginAsRoot()
+                }
+            }
+        })
     }
 }

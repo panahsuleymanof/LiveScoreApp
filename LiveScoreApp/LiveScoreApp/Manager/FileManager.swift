@@ -7,6 +7,7 @@
 
 import Foundation
 class FileManagerHelper {
+    
     func getFilePath() -> URL {
         let files = FileManager.default.urls(for: .documentDirectory,
                                              in: .userDomainMask)
@@ -33,5 +34,21 @@ class FileManagerHelper {
                 //
             }
         }
+    }
+    
+    func deleteUser(index: Int) {
+        getUser(complete: { users in
+            var updatedUsers = users
+            updatedUsers.remove(at: index)
+            self.savaUser(data: updatedUsers)
+        })
+    }
+    
+    func changePswd(index: Int, pswd: String) {
+        getUser(complete: { users in
+            var updatedUsers = users
+            updatedUsers[index].password = pswd
+            self.savaUser(data: updatedUsers)
+        })
     }
 }

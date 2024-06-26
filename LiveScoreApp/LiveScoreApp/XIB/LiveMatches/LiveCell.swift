@@ -24,9 +24,11 @@ class LiveCell: UITableViewCell {
     @IBOutlet weak var awayScore: UILabel!
     @IBOutlet weak var makeFavorite: UIButton!
     
+    let manager = FavoriteFileManagerHelper()
     var navigationCallback: (() -> Void)?
-    var favoriteCallBack: (() -> Void)?
+    var addCallBack: (() -> Void)?
     var deleteCallBack: (() -> Void)?
+
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -45,12 +47,18 @@ class LiveCell: UITableViewCell {
     
     @IBAction func favoritesTapped(_ sender: Any) {
         if makeFavorite.backgroundColor == UIColor.red {
-            makeFavorite.backgroundColor = .none
             deleteCallBack?()
         } else {
-            makeFavorite.backgroundColor = .red
-            favoriteCallBack?()
+            addCallBack?()
         }
+    }
+    
+    func makeRed() {
+        makeFavorite.backgroundColor = .red
+    }
+    
+    func makeNonRed() {
+        makeFavorite.backgroundColor = .none
     }
     
     func configureCell(data: LiveCellProtocol) {
@@ -58,6 +66,13 @@ class LiveCell: UITableViewCell {
         awayName.text = data.cellAwayName
         homeScore.text = data.cellHomeScore
         awayScore.text = data.cellAwayScore
+    }
+    
+    func configureFavoriteCell(ountry: String, league: String, homeTeam: String, awayTeam: String, home: String, away: String) {
+        homeName.text = homeTeam
+        awayName.text = awayTeam
+        homeScore.text = home
+        awayScore.text = away
     }
     
     func configureCountryandLeague(country: String, league: String) {

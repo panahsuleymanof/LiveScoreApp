@@ -17,6 +17,7 @@ class HomeController: UIViewController {
     var favoritedMatches = [FavoriteMatches]()
     var tappedCountry = [League]()
     var filteredMatches: [(countryName: String, leagueName: String, liveMatch: LiveMatch)] = []
+    var manager = FavoriteFileManagerHelper()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -26,7 +27,18 @@ class HomeController: UIViewController {
         self.table.tableHeaderView = self.headerView()
         table.dataSource = self
         table.delegate = self
+        manager.getMatches(complete: { matches in
+            self.favoritedMatches = matches
+        })
     }
+    
+//    override func viewWillAppear(_ animated: Bool) {
+//        super.viewWillAppear(animated)
+//        manager.getMatches { [weak self] match in
+//            self?.favoritedMatches = match
+//            self?.table.reloadData() // Reload table view data
+//        }
+//    }
     
     func extractLiveMatches() {
         for country in countries {
@@ -71,9 +83,8 @@ class HomeController: UIViewController {
         
         // Create the text field
         let textField = UITextField()
-        textField.placeholder = "Search for matches, leagues, clubs"
         textField.attributedPlaceholder = NSAttributedString(
-            string: "Search for matches",
+            string: "Search for clubs, countries or leagues",
             attributes: [NSAttributedString.Key.foregroundColor: UIColor(white: 0.7, alpha: 1.0)]
         ) // Slightly darker gray for placeholder
         textField.textColor = UIColor(white: 0.9, alpha: 1.0) // Light gray text
@@ -148,28 +159,36 @@ extension HomeController: UITableViewDataSource {
             self.navigationController?.show(vc, sender: nil)
         }
         
-        cell.favoriteCallBack = {
-            let newFavorite = FavoriteMatches(
-                countryName: matchData.countryName,
-                leagueName: matchData.leagueName,
-                homeName: matchData.liveMatch.homeTeam,
-                awayName: matchData.liveMatch.awayTeam,
-                homeScore: matchData.liveMatch.homeScore,
-                awayScore: matchData.liveMatch.awayScore
-            )
-            self.favoritedMatches.append(newFavorite)
-            let vc = self.storyboard?.instantiateViewController(identifier: "\(FavoritesController.self)") as! FavoritesController
-            vc.configureMathes(data: self.favoritedMatches)
+        cell.addCallBack = {
+            self.manager.getMatches(complete: { matches  in
+                let newMatch = (FavoriteMatches(countryName: matchData.countryName, leagueName: matchData.leagueName, homeName: matchData.liveMatch.homeTeam, awayName: matchData.liveMatch.awayTeam, homeScore: matchData.liveMatch.homeScore, awayScore: matchData.liveMatch.awayScore, isfavorited: true))
+                cell.makeRed()
+                self.favoritedMatches.append(newMatch)
+                self.manager.saveMatch(data: self.favoritedMatches)
+            })
         }
         
         cell.deleteCallBack = {
-            if let matchIndex = self.favoritedMatches.firstIndex(where: { $0.awayName == matchData.liveMatch.awayTeam }) {
-                self.favoritedMatches.remove(at: matchIndex)
+            if let index = self.favoritedMatches.firstIndex(where: {$0.homeName == matchData.liveMatch.homeTeam}) {
+                self.favoritedMatches.remove(at: index)
             }
-            let vc = self.storyboard?.instantiateViewController(identifier: "\(FavoritesController.self)") as! FavoritesController
-            vc.configureMathes(data: self.favoritedMatches)
+            self.manager.getMatches(complete: { matches in
+                if let index = matches.firstIndex(where: {$0.homeName == matchData.liveMatch.homeTeam}) {
+                    cell.makeNonRed()
+                    self.manager.deleteMatch(index: index)
+                }
+            }
+            )
         }
-
+        
+        if let index = favoritedMatches.firstIndex(where: {$0.homeName == matchData.liveMatch.homeTeam}) {
+            if favoritedMatches[index].isfavorited {
+                cell.makeRed()
+            } else {
+                cell.makeNonRed()
+            }
+        }
+        
         return cell
     }
 }

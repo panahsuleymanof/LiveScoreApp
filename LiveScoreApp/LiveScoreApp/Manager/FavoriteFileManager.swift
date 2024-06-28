@@ -9,15 +9,13 @@ import Foundation
 
 class FavoriteFileManagerHelper {
     
-    // Get the file path for the JSON file
     func getFilePath() -> URL {
         let files = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)
-        let path = files[0].appendingPathComponent("matches.json") // Corrected
+        let path = files[0].appendingPathComponent("matches.json")
         print("File path: \(path)")
         return path
     }
     
-    // Save favorite matches to a JSON file
     func saveMatch(data: [FavoriteMatches]) {
         do {
             let encodedData = try JSONEncoder().encode(data)
@@ -28,11 +26,9 @@ class FavoriteFileManagerHelper {
         }
     }
     
-    // Retrieve favorite matches from the JSON file
     func getMatches(complete: @escaping ([FavoriteMatches]) -> Void) {
         let filePath = getFilePath()
         
-        // Check if file exists
         guard FileManager.default.fileExists(atPath: filePath.path) else {
             print("File does not exist.")
             complete([])
@@ -50,7 +46,6 @@ class FavoriteFileManagerHelper {
         }
     }
     
-    // Delete a match from the JSON file by index
     func deleteMatch(index: Int) {
         getMatches(complete: { matches in
             var updatedMatches = matches

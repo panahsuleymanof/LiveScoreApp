@@ -57,7 +57,6 @@ class LoginController: UIViewController {
             if !name.isEmpty && !pswd.isEmpty {
                 manager.getUser { user in
                     self.users = user
-                    print(users)
                 }
                 
                 if let userIndex = users.firstIndex(where: {$0.email == name && $0.password == pswd}) {

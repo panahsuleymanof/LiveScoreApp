@@ -50,12 +50,10 @@ class LiveCell: UITableViewCell {
     }
     
     func makeRed() {
-//        makeFavorite.setImage(favoriteImage, for: .normal)
             makeFavorite.backgroundColor = .red
     }
     
     func makeNonRed() {
-     //   makeFavorite.setImage(unfavoriteImage, for: .normal)
         makeFavorite.backgroundColor = .none
     }
     

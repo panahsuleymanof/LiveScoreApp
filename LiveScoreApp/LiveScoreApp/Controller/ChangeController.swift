@@ -35,14 +35,12 @@ class ChangeController: UIViewController {
         confirmPswd.attributedPlaceholder = NSAttributedString(
             string: "New password again",
             attributes: [NSAttributedString.Key.foregroundColor: UIColor.lightGray])
-        print(user)
         fetchUser()
     }
     
     func fetchUser() {
         do {
             user = try context.fetch(LoggedUser.fetchRequest())
-            print(user)
         } catch {
             print(error.localizedDescription)
         }
@@ -64,7 +62,6 @@ class ChangeController: UIViewController {
             if nowPswd == user[0].password && !nextPswd.isEmpty && !againPswd.isEmpty{
                 if nextPswd == againPswd {
                     manager.getUser(complete: { users in
-                        print(users)
                         if let userIndex = users.firstIndex(where: {$0.email == user[0].email && $0.password == user[0].password}) {
                             if users[userIndex].password == nowPswd {
                                 var updatedUsers = users

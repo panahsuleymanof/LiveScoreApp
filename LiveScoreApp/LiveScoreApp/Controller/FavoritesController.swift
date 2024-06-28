@@ -25,7 +25,7 @@ class FavoritesController: UIViewController, UITableViewDataSource, UITableViewD
         super.viewWillAppear(animated)
         manager.getMatches { [weak self] match in
             self?.matches = match
-            self?.table.reloadData() // Reload table view data
+            self?.table.reloadData()
         }
     }
 

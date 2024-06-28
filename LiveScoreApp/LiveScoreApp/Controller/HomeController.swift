@@ -34,7 +34,7 @@ class HomeController: UIViewController {
         super.viewWillAppear(animated)
         manager.getMatches { [weak self] match in
             self?.favoritedMatches = match
-            self?.table.reloadData() // Reload table view data
+            self?.table.reloadData()
         }
     }
     
@@ -69,37 +69,31 @@ class HomeController: UIViewController {
     }
     
     private func headerView() -> UIView {
-        // Create the main header view
         let headerView = UIView(frame: CGRect(x: 0, y: 0, width: self.table.frame.width, height: 100))
-        headerView.backgroundColor = UIColor(hex: "00141e") // Equivalent to #00141e
+        headerView.backgroundColor = UIColor(hex: "00141e")
         
-        // Create the inner view
         let innerView = UIView()
-        innerView.backgroundColor = UIColor(red: 0.0, green: 20.0/255.0, blue: 30.0/255.0, alpha: 1.0) // Dark blue
+        innerView.backgroundColor = UIColor(red: 0.0, green: 20.0/255.0, blue: 30.0/255.0, alpha: 1.0)
         innerView.layer.cornerRadius = 10
         innerView.translatesAutoresizingMaskIntoConstraints = false
         
-        // Create the text field
         let textField = UITextField()
         textField.attributedPlaceholder = NSAttributedString(
             string: "Search for clubs, countries or leagues",
             attributes: [NSAttributedString.Key.foregroundColor: UIColor(white: 0.7, alpha: 1.0)]
-        ) // Slightly darker gray for placeholder
-        textField.textColor = UIColor(white: 0.9, alpha: 1.0) // Light gray text
+        )
+        textField.textColor = UIColor(white: 0.9, alpha: 1.0)
         textField.borderStyle = .roundedRect
         textField.textAlignment = .left
         textField.clearButtonMode = .whileEditing
-        textField.backgroundColor = UIColor(red: 28.0/255.0, green: 43.0/255.0, blue: 53.0/255.0, alpha: 1.0) // Dark blueish background
+        textField.backgroundColor = UIColor(red: 28.0/255.0, green: 43.0/255.0, blue: 53.0/255.0, alpha: 1.0)
         textField.translatesAutoresizingMaskIntoConstraints = false
         textField.addTarget(self, action: #selector(textFieldDidChange(_:)), for: .editingChanged)
         
-        // Add the text field to the inner view
         innerView.addSubview(textField)
         
-        // Add the inner view to the header view
         headerView.addSubview(innerView)
         
-        // Constraints for inner view
         NSLayoutConstraint.activate([
             innerView.centerXAnchor.constraint(equalTo: headerView.centerXAnchor),
             innerView.centerYAnchor.constraint(equalTo: headerView.centerYAnchor),
@@ -107,7 +101,6 @@ class HomeController: UIViewController {
             innerView.heightAnchor.constraint(equalToConstant: 50)
         ])
         
-        // Constraints for text field within the inner view
         NSLayoutConstraint.activate([
             textField.leadingAnchor.constraint(equalTo: innerView.leadingAnchor, constant: 10),
             textField.trailingAnchor.constraint(equalTo: innerView.trailingAnchor, constant: -10),
@@ -147,13 +140,11 @@ extension HomeController: UITableViewDataSource {
         cell.configureCell(data: matchData.liveMatch)
         cell.configureCountryandLeague(country: matchData.countryName, league: matchData.leagueName)
         
-        // Reset cell state (important to avoid reuse issues)
-        cell.makeNonRed() // Ensure cell is in non-favorited state initially
+        cell.makeNonRed()
         
-        // Check if this match is in the favorites list
         if let index = favoritedMatches.firstIndex(where: { $0.homeName == matchData.liveMatch.homeTeam }) {
             if favoritedMatches[index].isfavorited {
-                cell.makeRed() // Set to red if favorited
+                cell.makeRed()
             }
         }
         

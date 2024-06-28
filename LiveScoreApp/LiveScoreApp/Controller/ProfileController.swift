@@ -14,18 +14,24 @@ class ProfileController: UIViewController {
     
     var user = [LoggedUser]()
     var manager = FileManagerHelper()
+    var matchManager = FavoriteFileManagerHelper()
     let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        title = "Profile"
+        self.navigationController?.navigationBar.titleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.lightGray]
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
         fetchUser()
-        print(user)
     }
     
     func fetchUser() {
         do {
             user = try context.fetch(LoggedUser.fetchRequest())
-            userFullname.text = user[0].password
+            userFullname.text = user[0].name
         } catch {
             print(error.localizedDescription)
         }
@@ -60,6 +66,7 @@ class ProfileController: UIViewController {
                 UserDefaults.standard.set(false, forKey: "isLoggedIn")
                 deleteItem(index: 0)
                 manager.deleteUser(index: userIndex)
+                matchManager.deleteAllMatches()
                 let scene = UIApplication.shared.connectedScenes.first
                 if let sceneDelegate: SceneDelegate = scene?.delegate as? SceneDelegate {
                     sceneDelegate.setLoginAsRoot()

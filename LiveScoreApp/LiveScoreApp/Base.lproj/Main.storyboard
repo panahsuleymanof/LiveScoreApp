@@ -30,12 +30,14 @@
                                     <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="MQS-EY-G2W">
                                         <rect key="frame" x="0.0" y="0.0" width="345" height="56.666666666666664"/>
                                         <color key="backgroundColor" red="0.047058823529411764" green="0.17254901960784313" blue="0.20392156862745098" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
                                     <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="s2w-KB-ysC">
                                         <rect key="frame" x="0.0" y="81.666666666666686" width="345" height="56.666666666666657"/>
                                         <color key="backgroundColor" red="0.047058823529411764" green="0.17254901960784313" blue="0.20392156862745098" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                                     </textField>
@@ -120,24 +122,28 @@
                                     <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="nw8-ml-81p">
                                         <rect key="frame" x="0.0" y="0.0" width="345" height="54.333333333333336"/>
                                         <color key="backgroundColor" red="0.047058823529411764" green="0.17254901960784313" blue="0.20392156862745098" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
                                     <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="rbP-fo-jpF">
                                         <rect key="frame" x="0.0" y="66.333333333333343" width="345" height="54.333333333333343"/>
                                         <color key="backgroundColor" red="0.047058823529411764" green="0.17254901960784313" blue="0.20392156862745098" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
                                     <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="CCR-71-qQJ">
                                         <rect key="frame" x="0.0" y="132.66666666666669" width="345" height="54.666666666666657"/>
                                         <color key="backgroundColor" red="0.047058823529411764" green="0.17254901960784313" blue="0.20392156862745098" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
                                     <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Zkv-U2-Lfk">
                                         <rect key="frame" x="0.0" y="199.33333333333331" width="345" height="54.333333333333343"/>
                                         <color key="backgroundColor" red="0.047058823529411764" green="0.17254901960784313" blue="0.20392156862745098" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
@@ -271,7 +277,9 @@
                             <constraint firstItem="mRx-tM-HoX" firstAttribute="top" secondItem="9BV-vD-gLG" secondAttribute="bottom" constant="8" symbolic="YES" id="vig-Cu-wKq"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="Xul-vX-Mor"/>
+                    <navigationItem key="navigationItem" id="Xul-vX-Mor">
+                        <barButtonItem key="leftBarButtonItem" title="Item" image="mini_logo" id="AOj-5Q-5Xg"/>
+                    </navigationItem>
                     <connections>
                         <outlet property="userFullname" destination="mRx-tM-HoX" id="L8p-bk-9NP"/>
                     </connections>
@@ -294,18 +302,21 @@
                                     <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="SkN-S2-Ld9">
                                         <rect key="frame" x="0.0" y="0.0" width="369" height="49.333333333333336"/>
                                         <color key="backgroundColor" red="0.047058823529411764" green="0.17254901960784313" blue="0.20392156862745098" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
                                     <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="5yB-7m-DGr">
                                         <rect key="frame" x="0.0" y="65.333333333333343" width="369" height="49.333333333333343"/>
                                         <color key="backgroundColor" red="0.047058823529411764" green="0.17254901960784313" blue="0.20392156862745098" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
                                     <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Ed1-bw-qgV">
                                         <rect key="frame" x="0.0" y="130.66666666666666" width="369" height="49.333333333333343"/>
                                         <color key="backgroundColor" red="0.047058823529411764" green="0.17254901960784313" blue="0.20392156862745098" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
@@ -324,6 +335,11 @@
                                 <buttonConfiguration key="configuration" style="plain" title="Change">
                                     <fontDescription key="titleFontDescription" type="system" weight="semibold" pointSize="16"/>
                                 </buttonConfiguration>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <integer key="value" value="5"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                                 <connections>
                                     <action selector="changeTapped:" destination="vK9-mB-BgZ" eventType="touchUpInside" id="Jeu-1Y-o77"/>
                                 </connections>
@@ -376,7 +392,9 @@
                             <constraint firstItem="c39-mr-4ZW" firstAttribute="trailing" secondItem="cOI-ac-W5u" secondAttribute="trailing" id="rqs-2a-nEu"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="DzS-vf-pzz"/>
+                    <navigationItem key="navigationItem" id="DzS-vf-pzz">
+                        <barButtonItem key="leftBarButtonItem" title="Item" image="mini_logo" id="VY3-yX-JbU"/>
+                    </navigationItem>
                     <connections>
                         <outlet property="table" destination="cOI-ac-W5u" id="48h-p1-hhC"/>
                     </connections>

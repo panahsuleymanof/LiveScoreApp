@@ -21,24 +21,22 @@ class HomeController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        title = "Profile"
         parseFootballFile()
         extractLiveMatches()
         table.register(UINib(nibName: "\(LiveCell.self)", bundle: nil), forCellReuseIdentifier: "\(LiveCell.self)")
         self.table.tableHeaderView = self.headerView()
         table.dataSource = self
         table.delegate = self
-        manager.getMatches(complete: { matches in
-            self.favoritedMatches = matches
-        })
     }
     
-//    override func viewWillAppear(_ animated: Bool) {
-//        super.viewWillAppear(animated)
-//        manager.getMatches { [weak self] match in
-//            self?.favoritedMatches = match
-//            self?.table.reloadData() // Reload table view data
-//        }
-//    }
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        manager.getMatches { [weak self] match in
+            self?.favoritedMatches = match
+            self?.table.reloadData() // Reload table view data
+        }
+    }
     
     func extractLiveMatches() {
         for country in countries {
@@ -149,22 +147,22 @@ extension HomeController: UITableViewDataSource {
         cell.configureCell(data: matchData.liveMatch)
         cell.configureCountryandLeague(country: matchData.countryName, league: matchData.leagueName)
         
-        cell.navigationCallback = {
-            let vc = self.storyboard?.instantiateViewController(identifier: "\(CountryController.self)") as! CountryController
-            vc.title = matchData.countryName
-            if let leagueIndex = self.countries.firstIndex(where: { $0.name == matchData.countryName }) {
-                self.tappedCountry = self.countries[leagueIndex].leagues
+        // Reset cell state (important to avoid reuse issues)
+        cell.makeNonRed() // Ensure cell is in non-favorited state initially
+        
+        // Check if this match is in the favorites list
+        if let index = favoritedMatches.firstIndex(where: { $0.homeName == matchData.liveMatch.homeTeam }) {
+            if favoritedMatches[index].isfavorited {
+                cell.makeRed() // Set to red if favorited
             }
-            vc.leagues = self.tappedCountry
-            self.navigationController?.show(vc, sender: nil)
         }
         
         cell.addCallBack = {
             self.manager.getMatches(complete: { matches  in
                 let newMatch = (FavoriteMatches(countryName: matchData.countryName, leagueName: matchData.leagueName, homeName: matchData.liveMatch.homeTeam, awayName: matchData.liveMatch.awayTeam, homeScore: matchData.liveMatch.homeScore, awayScore: matchData.liveMatch.awayScore, isfavorited: true))
-                cell.makeRed()
                 self.favoritedMatches.append(newMatch)
                 self.manager.saveMatch(data: self.favoritedMatches)
+                cell.makeRed()
             })
         }
         
@@ -174,19 +172,11 @@ extension HomeController: UITableViewDataSource {
             }
             self.manager.getMatches(complete: { matches in
                 if let index = matches.firstIndex(where: {$0.homeName == matchData.liveMatch.homeTeam}) {
-                    cell.makeNonRed()
                     self.manager.deleteMatch(index: index)
+                    cell.makeNonRed()
+                    self.table.reloadData()
                 }
-            }
-            )
-        }
-        
-        if let index = favoritedMatches.firstIndex(where: {$0.homeName == matchData.liveMatch.homeTeam}) {
-            if favoritedMatches[index].isfavorited {
-                cell.makeRed()
-            } else {
-                cell.makeNonRed()
-            }
+            })
         }
         
         return cell
@@ -194,12 +184,25 @@ extension HomeController: UITableViewDataSource {
 }
 
 extension HomeController: UITableViewDelegate {
+    
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         120
     }
     
     func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
         100
+    }
+        
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
+        let selectedMatch = filteredMatches[indexPath.row]
+        let vc = storyboard?.instantiateViewController(identifier: "\(CountryController.self)") as! CountryController
+        vc.title = selectedMatch.countryName
+        if let leagueIndex = self.countries.firstIndex(where: { $0.name == selectedMatch.countryName }) {
+            self.tappedCountry = self.countries[leagueIndex].leagues
+        }
+        vc.leagues = self.tappedCountry
+        self.navigationController?.show(vc, sender: nil)
     }
 }
 

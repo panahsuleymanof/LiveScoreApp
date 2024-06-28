@@ -24,6 +24,8 @@
 		C124491C2C285191009625FD /* ChangeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C124491B2C285191009625FD /* ChangeController.swift */; };
 		C12449202C2B0BF4009625FD /* FavoriteMatches.swift in Sources */ = {isa = PBXBuildFile; fileRef = C124491F2C2B0BF4009625FD /* FavoriteMatches.swift */; };
 		C12449222C2B5FDE009625FD /* FavoriteFileManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C12449212C2B5FDE009625FD /* FavoriteFileManager.swift */; };
+		C124492B2C2EFE01009625FD /* FavoriteCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C12449292C2EFE01009625FD /* FavoriteCell.swift */; };
+		C124492C2C2EFE01009625FD /* FavoriteCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C124492A2C2EFE01009625FD /* FavoriteCell.xib */; };
 		C197A8AE2C262D1E00DFB2DA /* LeagueCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C197A8AD2C262D1E00DFB2DA /* LeagueCell.xib */; };
 		C197A8AF2C262D1E00DFB2DA /* LeagueCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C197A8AC2C262D1E00DFB2DA /* LeagueCell.swift */; };
 		C197A8B32C26316700DFB2DA /* TeamsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C197A8B22C26316700DFB2DA /* TeamsController.swift */; };
@@ -57,6 +59,8 @@
 		C124491B2C285191009625FD /* ChangeController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangeController.swift; sourceTree = "<group>"; };
 		C124491F2C2B0BF4009625FD /* FavoriteMatches.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteMatches.swift; sourceTree = "<group>"; };
 		C12449212C2B5FDE009625FD /* FavoriteFileManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteFileManager.swift; sourceTree = "<group>"; };
+		C12449292C2EFE01009625FD /* FavoriteCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteCell.swift; sourceTree = "<group>"; };
+		C124492A2C2EFE01009625FD /* FavoriteCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FavoriteCell.xib; sourceTree = "<group>"; };
 		C197A8AC2C262D1E00DFB2DA /* LeagueCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeagueCell.swift; sourceTree = "<group>"; };
 		C197A8AD2C262D1E00DFB2DA /* LeagueCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LeagueCell.xib; sourceTree = "<group>"; };
 		C197A8B22C26316700DFB2DA /* TeamsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamsController.swift; sourceTree = "<group>"; };
@@ -152,6 +156,15 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
+		C12449242C2EFD61009625FD /* FavoriteMatch */ = {
+			isa = PBXGroup;
+			children = (
+				C12449292C2EFE01009625FD /* FavoriteCell.swift */,
+				C124492A2C2EFE01009625FD /* FavoriteCell.xib */,
+			);
+			path = FavoriteMatch;
+			sourceTree = "<group>";
+		};
 		C197A8AA2C262CDB00DFB2DA /* LiveMatches */ = {
 			isa = PBXGroup;
 			children = (
@@ -190,6 +203,7 @@
 		C1E594A62C1C32440050F080 /* XIB */ = {
 			isa = PBXGroup;
 			children = (
+				C12449242C2EFD61009625FD /* FavoriteMatch */,
 				C197A8B42C26335D00DFB2DA /* Teams */,
 				C197A8AB2C262D0800DFB2DA /* Leagues */,
 				C197A8AA2C262CDB00DFB2DA /* LiveMatches */,
@@ -256,6 +270,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C197A8B72C26337200DFB2DA /* TeamsCell.xib in Resources */,
+				C124492C2C2EFE01009625FD /* FavoriteCell.xib in Resources */,
 				C1E594A32C1C25AB0050F080 /* Football.json in Resources */,
 				C10D160D2C099BCB004C76DA /* Assets.xcassets in Resources */,
 				C197A8AE2C262D1E00DFB2DA /* LeagueCell.xib in Resources */,
@@ -277,6 +292,7 @@
 				C10D161B2C099CF2004C76DA /* RegisterController.swift in Sources */,
 				C124491C2C285191009625FD /* ChangeController.swift in Sources */,
 				C197A8B82C26337200DFB2DA /* TeamsCell.swift in Sources */,
+				C124492B2C2EFE01009625FD /* FavoriteCell.swift in Sources */,
 				C12449192C2816A7009625FD /* LoggedUser+CoreDataClass.swift in Sources */,
 				C124491A2C2816A7009625FD /* LoggedUser+CoreDataProperties.swift in Sources */,
 				C197A8AF2C262D1E00DFB2DA /* LeagueCell.swift in Sources */,

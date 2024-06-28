@@ -25,6 +25,8 @@ class LiveCell: UITableViewCell {
     @IBOutlet weak var makeFavorite: UIButton!
     
     let manager = FavoriteFileManagerHelper()
+    let favoriteImage = UIImage(systemName: "star.fill")
+    let unfavoriteImage = UIImage(systemName: "star")
     var navigationCallback: (() -> Void)?
     var addCallBack: (() -> Void)?
     var deleteCallBack: (() -> Void)?
@@ -32,17 +34,11 @@ class LiveCell: UITableViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        let tapGesture = UITapGestureRecognizer(target: self, action: #selector(labelTapped))
-        countryName.addGestureRecognizer(tapGesture)
     }
     
-    @objc func labelTapped() {
-        navigationCallback?()
-    }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
-        countryName.isUserInteractionEnabled = true
     }
     
     @IBAction func favoritesTapped(_ sender: Any) {
@@ -54,10 +50,12 @@ class LiveCell: UITableViewCell {
     }
     
     func makeRed() {
-        makeFavorite.backgroundColor = .red
+//        makeFavorite.setImage(favoriteImage, for: .normal)
+            makeFavorite.backgroundColor = .red
     }
     
     func makeNonRed() {
+     //   makeFavorite.setImage(unfavoriteImage, for: .normal)
         makeFavorite.backgroundColor = .none
     }
     
@@ -68,7 +66,7 @@ class LiveCell: UITableViewCell {
         awayScore.text = data.cellAwayScore
     }
     
-    func configureFavoriteCell(ountry: String, league: String, homeTeam: String, awayTeam: String, home: String, away: String) {
+    func configureFavoriteCell(homeTeam: String, awayTeam: String, home: String, away: String) {
         homeName.text = homeTeam
         awayName.text = awayTeam
         homeScore.text = home

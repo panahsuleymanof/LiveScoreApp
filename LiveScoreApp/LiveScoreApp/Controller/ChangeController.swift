@@ -20,6 +20,21 @@ class ChangeController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         title = "Change Password"
+        currentPswd.layer.cornerRadius = 5
+        currentPswd.layer.masksToBounds = true
+        newPswd.layer.cornerRadius = 5
+        newPswd.layer.masksToBounds = true
+        confirmPswd.layer.cornerRadius = 5
+        confirmPswd.layer.masksToBounds = true
+        currentPswd.attributedPlaceholder = NSAttributedString(
+            string: "Current password",
+            attributes: [NSAttributedString.Key.foregroundColor: UIColor.lightGray])
+        newPswd.attributedPlaceholder = NSAttributedString(
+            string: "New Password",
+            attributes: [NSAttributedString.Key.foregroundColor: UIColor.lightGray])
+        confirmPswd.attributedPlaceholder = NSAttributedString(
+            string: "New password again",
+            attributes: [NSAttributedString.Key.foregroundColor: UIColor.lightGray])
         print(user)
         fetchUser()
     }

@@ -58,4 +58,19 @@ class FavoriteFileManagerHelper {
             self.saveMatch(data: updatedMatches)
         })
     }
+    
+    func deleteAllMatches() {
+        let filePath = getFilePath()
+        
+        if FileManager.default.fileExists(atPath: filePath.path) {
+            do {
+                try FileManager.default.removeItem(at: filePath)
+                print("All matches deleted successfully.")
+            } catch {
+                print("Failed to delete all matches: \(error.localizedDescription)")
+            }
+        } else {
+            print("File does not exist, nothing to delete.")
+        }
+    }
 }

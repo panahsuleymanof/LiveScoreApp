@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="32700.99.1234" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22684"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="115" id="KGk-i7-Jjw" customClass="FavoriteCell" customModule="LiveScoreApp" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="412" height="115"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="412" height="115"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ufm-p7-XW5">
+                        <rect key="frame" x="0.0" y="0.0" width="412" height="56"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="soccerball" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="2e6-Hi-C3Y">
+                                <rect key="frame" x="16" y="13.333333333333332" width="37" height="29.999999999999996"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="31.329999999999998" id="Ey4-ja-XzV"/>
+                                    <constraint firstAttribute="width" constant="37" id="aIP-XJ-6aI"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="League Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dYZ-7V-hSH">
+                                <rect key="frame" x="56.999999999999993" y="10" width="94.333333333333314" height="18"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleSubhead"/>
+                                <color key="textColor" systemColor="systemYellowColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Country Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kYq-7K-Kqx">
+                                <rect key="frame" x="57.000000000000007" y="29.999999999999996" width="81.666666666666686" height="14.333333333333332"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="0.0" green="0.11764705882352941" blue="0.15686274509803921" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="2e6-Hi-C3Y" firstAttribute="centerY" secondItem="ufm-p7-XW5" secondAttribute="centerY" id="1Ko-nv-OGR"/>
+                            <constraint firstItem="2e6-Hi-C3Y" firstAttribute="leading" secondItem="ufm-p7-XW5" secondAttribute="leading" constant="16" id="3H0-xf-9IE"/>
+                            <constraint firstItem="kYq-7K-Kqx" firstAttribute="leading" secondItem="2e6-Hi-C3Y" secondAttribute="trailing" constant="4" id="9hc-Y7-bhY"/>
+                            <constraint firstItem="dYZ-7V-hSH" firstAttribute="leading" secondItem="2e6-Hi-C3Y" secondAttribute="trailing" constant="4" id="PR4-zq-Zd3"/>
+                            <constraint firstItem="kYq-7K-Kqx" firstAttribute="top" secondItem="dYZ-7V-hSH" secondAttribute="bottom" constant="2" id="RuC-au-okt"/>
+                            <constraint firstItem="dYZ-7V-hSH" firstAttribute="top" secondItem="ufm-p7-XW5" secondAttribute="top" constant="10" id="Tff-BC-Mhu"/>
+                            <constraint firstAttribute="height" constant="56" id="fVB-hz-l43"/>
+                        </constraints>
+                    </view>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Home Team Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="j0h-ds-vi4">
+                        <rect key="frame" x="20.000000000000007" y="64" width="120.66666666666669" height="17"/>
+                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="14"/>
+                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Away Team Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RaX-4R-nYP">
+                        <rect key="frame" x="19.999999999999993" y="90" width="116.33333333333331" height="17"/>
+                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="14"/>
+                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ori-BP-kmi">
+                        <rect key="frame" x="386" y="64" width="10" height="18"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                        <color key="textColor" systemColor="systemRedColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Iha-Vx-P0P">
+                        <rect key="frame" x="386" y="89" width="10" height="18"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                        <color key="textColor" systemColor="systemRedColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <color key="backgroundColor" red="0.0039215686274509803" green="0.039215686274509803" blue="0.058823529411764705" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                <constraints>
+                    <constraint firstItem="RaX-4R-nYP" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="20" id="BcE-ZF-Egd"/>
+                    <constraint firstItem="j0h-ds-vi4" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="20" id="GmT-1a-9HA"/>
+                    <constraint firstAttribute="bottom" secondItem="RaX-4R-nYP" secondAttribute="bottom" constant="8" id="HGz-b3-6QE"/>
+                    <constraint firstItem="ufm-p7-XW5" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="J0o-x9-jSO"/>
+                    <constraint firstItem="j0h-ds-vi4" firstAttribute="top" secondItem="ufm-p7-XW5" secondAttribute="bottom" constant="8" id="J7h-Wy-AVx"/>
+                    <constraint firstAttribute="trailing" secondItem="ufm-p7-XW5" secondAttribute="trailing" id="OZY-m2-Vns"/>
+                    <constraint firstAttribute="bottom" secondItem="Iha-Vx-P0P" secondAttribute="bottom" constant="8" id="RjX-ra-YKW"/>
+                    <constraint firstAttribute="trailing" secondItem="ori-BP-kmi" secondAttribute="trailing" constant="16" id="ec5-JD-DNr"/>
+                    <constraint firstItem="ufm-p7-XW5" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="jqm-al-zPp"/>
+                    <constraint firstItem="ori-BP-kmi" firstAttribute="top" secondItem="ufm-p7-XW5" secondAttribute="bottom" constant="8" symbolic="YES" id="tEM-m7-BuE"/>
+                    <constraint firstAttribute="trailing" secondItem="Iha-Vx-P0P" secondAttribute="trailing" constant="16" id="zUx-R3-aIH"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="awayTeamName" destination="RaX-4R-nYP" id="eLb-hS-lbw"/>
+                <outlet property="awayTeamScore" destination="Iha-Vx-P0P" id="Jtf-SN-JJC"/>
+                <outlet property="countryName" destination="kYq-7K-Kqx" id="1oC-Ts-MMt"/>
+                <outlet property="homeTeamName" destination="j0h-ds-vi4" id="KYP-Od-DQC"/>
+                <outlet property="homeTeamScore" destination="ori-BP-kmi" id="pTG-cT-b31"/>
+                <outlet property="leagueName" destination="dYZ-7V-hSH" id="mOh-mC-Vg4"/>
+            </connections>
+            <point key="canvasLocation" x="56.488549618320612" y="68.661971830985919"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="soccerball" catalog="system" width="128" height="123"/>
+        <systemColor name="systemRedColor">
+            <color red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemYellowColor">
+            <color red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>

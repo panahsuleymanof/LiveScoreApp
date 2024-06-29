@@ -30,7 +30,7 @@ class ChangeController: UIViewController {
             string: "Current password",
             attributes: [NSAttributedString.Key.foregroundColor: UIColor.lightGray])
         newPswd.attributedPlaceholder = NSAttributedString(
-            string: "New Password",
+            string: "New password",
             attributes: [NSAttributedString.Key.foregroundColor: UIColor.lightGray])
         confirmPswd.attributedPlaceholder = NSAttributedString(
             string: "New password again",

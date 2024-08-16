@@ -20,7 +20,7 @@ class LoginController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        title = "Login"
+        title = "Login Page"
         self.navigationController?.navigationBar.titleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.lightGray]
         usernameField.layer.cornerRadius = 18
         usernameField.layer.masksToBounds = true
